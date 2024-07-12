@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  app:
+    container_name: leetcode
+    build: .
+    image: leetcode:latest
+    volumes:
+      - ./src:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    ports:
+      - 5678:5678
+    working_dir: /app
+    entrypoint: sleep infinity
